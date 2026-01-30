@@ -1,4 +1,8 @@
 {
-  "source": "/(.*)",
-  "destination": "/homePage.html"
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }

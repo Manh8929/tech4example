@@ -1,3 +1,49 @@
-p{
+/* p{
     color: aqua;
+} */
+body {
+font-family: 'Arial', sans-serif;
+background-color: #ffe6e6;
+color: #333;
+margin: 0;
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
+h1 {
+text-align: center;
+color: #e63946;
+font-size: 3em;
+margin-bottom: 20px;
+}
+p {
+line-height: 1.6;
+max-width: 600px;
+margin: 20px auto;
+padding: 20px;
+background: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+font-size: 1.2em;
+}
+.heart {
+font-size: 5em;
+color: #e63946;
+margin: 20px 0;
+}
+button {
+padding: 10px 20px;
+font-size: 1.2em;
+color: white;
+background-color: #e63946;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+button:hover {
+background-color: #d62839;
 }
