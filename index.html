@@ -1,17 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nhập mật mã</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Tỏ Tình Với Em</h1>
-  <div class="heart">❤️</div>
-  <p>Em à, trong trái tim anh chỉ có một mình em. 
-      Anh muốn nói rằng anh rất yêu em và hy vọng em sẽ là người 
-      cùng anh viết nên câu chuyện đẹp nhất trong cuộc đời này.</p>
-  <button onclick="alert('Yêu em mãi mãi!')">Tôi Yêu Em</button>
+
+<div class="hearts"></div>
+
+<section class="page active">
+
+  <div class="card">
+
+    <div class="avatar">
+      <img src="./image/image.png">
+    </div>
+
+    <h2 class="title">
+      Nhập mật mã để mở quà nào 💕
+    </h2>
+
+    <div class="pin-box" id="pinBox">
+      <span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="hint">
+      Gợi ý: Sinh nhật em 🤫
+    </div>
+
+    <div class="keypad">
+      <button onclick="press(1)">1</button>
+      <button onclick="press(2)">2</button>
+      <button onclick="press(3)">3</button>
+      <button onclick="press(4)">4</button>
+      <button onclick="press(5)">5</button>
+      <button onclick="press(6)">6</button>
+      <button onclick="press(7)">7</button>
+      <button onclick="press(8)">8</button>
+      <button onclick="press(9)">9</button>
+      <button class="clear" onclick="clearPin()">C</button>
+      <button onclick="press(0)">0</button>
+      <button class="ok" onclick="checkPin()">OK</button>
+    </div>
+
+    <div class="loading" id="loading">
+      Đã xác nhận! Loading Tình Yêu... ❤️
+    </div>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>

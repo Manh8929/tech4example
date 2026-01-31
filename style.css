@@ -1,7 +1,7 @@
 /* p{
     color: aqua;
 } */
-body {
+/* body {
 font-family: 'Arial', sans-serif;
 background-color: #ffe6e6;
 color: #333;
@@ -46,4 +46,179 @@ transition: background-color 0.3s;
 }
 button:hover {
 background-color: #d62839;
+} */
+
+*{
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background: linear-gradient(#ffd3dc,#ffe9ef);
+  overflow: hidden;
+}
+
+.page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+}
+
+.card{
+  width:100%;
+  max-width:420px;
+  background:#fff3f6;
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+}
+
+.photo-box{
+  width: 100%;
+  height: 250px;   /* bạn có thể đổi 140–180 tuỳ thích */
+  margin-bottom: 10px;
+}
+
+.photo-box img{
+  width:100%;
+  height:100%;
+  border-radius:14px;
+  object-fit:cover;
+}
+
+.avatar img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:10px;
+}
+
+.title{
+  color:#ff5f8a;
+  margin:12px 0;
+  font-size:1.4rem;
+}
+
+.content{
+  color:#555;
+  line-height:1.5;
+  font-size:0.95rem;
+
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 6px;
+}
+
+/* PIN */
+
+.pin-box{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin:16px 0;
+}
+
+.pin-box span{
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  border:2px solid #ff7fa8;
+}
+
+.pin-box span.filled{
+  background:#ff7fa8;
+}
+
+.hint{
+  color:#ff6f9f;
+  font-size:0.9rem;
+  margin-bottom:12px;
+}
+
+.keypad{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.keypad button{
+  padding:14px 0;
+  font-size:1.1rem;
+  border:none;
+  border-radius:12px;
+  background:#ff8fb2;
+  color:white;
+  cursor:pointer;
+}
+
+.keypad .clear{
+  background:#ffc1d4;
+  color:#444;
+}
+
+.keypad .ok{
+  background:#ff5f8a;
+}
+
+.loading{
+  display:none;
+  margin-top:12px;
+  color:#ff5f8a;
+  font-weight:600;
+}
+
+/* HEART */
+
+.hearts{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.heart{
+  position:absolute;
+  top:-20px;
+  animation: fall linear forwards;
+  opacity:.8;
+}
+
+@keyframes fall{
+  to{
+    transform: translateY(110vh);
+    opacity:0;
+  }
+}
+
+@media (max-width:420px){
+  .card{
+    padding:16px;
+  }
+}
+.love-btn{
+  margin-top: 14px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg,#ff6fa5,#ff4f8b);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(255,79,139,.35);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.love-btn:active{
+  transform: scale(.95);
 }
